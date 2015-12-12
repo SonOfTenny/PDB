@@ -186,10 +186,14 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductionID, UserID, ShiftID, PlantID, ActualMix, CrumbWaste, Cmp_Waste, Manning, Date ")]Production production)
         {
+             
+            User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+
             try
             {
                 if (ModelState.IsValid)
                 {
+                   // production.UserID = user.Id;
                     db.Entry(production).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -200,7 +204,7 @@ namespace IdentityTutorial.Controllers
                 //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-            User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            //User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             ViewBag.UserID = user.Id;
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", production.ShiftID);
             ViewBag.PlantID = new SelectList(db.Plants, "PlantID", "Name", production.PlantID);

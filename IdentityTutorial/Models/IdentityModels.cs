@@ -46,6 +46,9 @@ namespace IdentityTutorial.Models
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<DowntimeType> DowntimeTypes { get; set; }
         public DbSet<Production> Productions { get; set; }
+        public DbSet<Downtime> Downtime { get; set; }
+        
+   
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

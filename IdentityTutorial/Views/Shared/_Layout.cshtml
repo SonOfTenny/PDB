@@ -21,11 +21,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Plants", "Index", "Plant")</li>
                     <li>@Html.ActionLink("Downtime Types", "Index", "DowntimeType")</li>
+                    <li>@Html.ActionLink("Downtime", "Index", "Downtime")</li>
   
                     <li>@Html.ActionLink("Production", "Index", "Production")</li>
                     <!-- ONLY IF YOURE WELCOME YOU CAN ENTER-->
@@ -42,7 +40,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Mark Tennyson Development</p>
         </footer>
     </div>
 

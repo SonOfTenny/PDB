@@ -208,6 +208,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DowntimeController.cs" />
     <Compile Include="Controllers\DowntimeTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -254,9 +255,18 @@
     <Compile Include="Migrations\201512121555479_added roles admin.Designer.cs">
       <DependentUpon>201512121555479_added roles admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512121707341_added downtime model.cs" />
+    <Compile Include="Migrations\201512121707341_added downtime model.Designer.cs">
+      <DependentUpon>201512121707341_added downtime model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512121710229_downtime mod.cs" />
+    <Compile Include="Migrations\201512121710229_downtime mod.Designer.cs">
+      <DependentUpon>201512121710229_downtime mod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\Downtime.cs" />
     <Compile Include="Models\DowntimeType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -352,6 +362,11 @@
     <Content Include="Views\UserAdmin\Details.cshtml" />
     <Content Include="Views\UserAdmin\Edit.cshtml" />
     <Content Include="Views\UserAdmin\Index.cshtml" />
+    <Content Include="Views\Downtime\Create.cshtml" />
+    <Content Include="Views\Downtime\Delete.cshtml" />
+    <Content Include="Views\Downtime\Details.cshtml" />
+    <Content Include="Views\Downtime\Edit.cshtml" />
+    <Content Include="Views\Downtime\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -391,6 +406,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512121555479_added roles admin.resx">
       <DependentUpon>201512121555479_added roles admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121707341_added downtime model.resx">
+      <DependentUpon>201512121707341_added downtime model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121710229_downtime mod.resx">
+      <DependentUpon>201512121710229_downtime mod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
