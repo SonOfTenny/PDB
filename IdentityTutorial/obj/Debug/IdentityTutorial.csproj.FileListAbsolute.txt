@@ -94,3 +94,4 @@ c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTut
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\bin\PagedList.Mvc.xml
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changedtheproductionuserIDtostring.resources
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changedidentitymodel.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addedrolesadmin.resources

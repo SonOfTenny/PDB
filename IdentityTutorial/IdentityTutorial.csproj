@@ -214,6 +214,7 @@
     <Compile Include="Controllers\PlantController.cs" />
     <Compile Include="Controllers\ProductionController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,8 +250,13 @@
     <Compile Include="Migrations\201512111411372_changed identitymodel.Designer.cs">
       <DependentUpon>201512111411372_changed identitymodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512121555479_added roles admin.cs" />
+    <Compile Include="Migrations\201512121555479_added roles admin.Designer.cs">
+      <DependentUpon>201512121555479_added roles admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\DowntimeType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -341,6 +347,11 @@
     <Content Include="Views\Production\Details.cshtml" />
     <Content Include="Views\Production\Edit.cshtml" />
     <Content Include="Views\Production\Index.cshtml" />
+    <Content Include="Views\UserAdmin\Create.cshtml" />
+    <Content Include="Views\UserAdmin\Delete.cshtml" />
+    <Content Include="Views\UserAdmin\Details.cshtml" />
+    <Content Include="Views\UserAdmin\Edit.cshtml" />
+    <Content Include="Views\UserAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -377,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512111411372_changed identitymodel.resx">
       <DependentUpon>201512111411372_changed identitymodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121555479_added roles admin.resx">
+      <DependentUpon>201512121555479_added roles admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

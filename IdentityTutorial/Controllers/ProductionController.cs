@@ -132,13 +132,16 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID, ShiftID, PlantID, ActualMix, CrumbWaste, Cmp_Waste,Manning, Date")]Production production)
+        public ActionResult Create([Bind(Include = "ShiftID, PlantID, ActualMix, CrumbWaste, Cmp_Waste,Manning, Date")]Production production)
         {
+            User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            ViewBag.UserID = user.Id.ToString();
             try
             {
 
                 if (ModelState.IsValid)
                 {
+                    production.UserID = user.Id;
                     db.Productions.Add(production);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -149,7 +152,7 @@ namespace IdentityTutorial.Controllers
                 //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-            User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            //User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             ViewBag.UserID = user.Id.ToString();
             ViewBag.currentUser = user.UserName;
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", production.ShiftID);
