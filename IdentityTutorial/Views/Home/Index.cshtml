@@ -5,13 +5,16 @@
 <div class="jumbotron">
     <h1>Shift Reports</h1>
     <p class="lead">This site is currently in test mode</p>
-    <h3>Let's get started!</h3>
-    @if (Request.IsAuthenticated)
-    {
-    <p>@Html.ActionLink("New Production Record", "Index", "Production")</p>
-    <p>@Html.ActionLink("New Downtime Record", "Index", "Downtime")</p>
-    }
-
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Let's get started!</h3>
+        @if (Request.IsAuthenticated)
+        {
+            <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
+            <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
+        }
+    </div>
 </div>
 <!--
 <div class="row">

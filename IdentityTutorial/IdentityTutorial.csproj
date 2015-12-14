@@ -214,8 +214,10 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlantController.cs" />
     <Compile Include="Controllers\ProductionController.cs" />
+    <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Controllers\UserRolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -283,6 +285,10 @@
     <Compile Include="Migrations\201512142036248_fixed downtime.Designer.cs">
       <DependentUpon>201512142036248_fixed downtime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512142318587_updated.cs" />
+    <Compile Include="Migrations\201512142318587_updated.Designer.cs">
+      <DependentUpon>201512142318587_updated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
@@ -292,6 +298,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Production.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Shift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -389,6 +396,17 @@
     <Content Include="Views\Downtime\Details.cshtml" />
     <Content Include="Views\Downtime\Edit.cshtml" />
     <Content Include="Views\Downtime\Index.cshtml" />
+    <Content Include="Views\UserAdmin\RoleAdmin.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\UserRoles\Create.cshtml" />
+    <Content Include="Views\UserRoles\Delete.cshtml" />
+    <Content Include="Views\UserRoles\Details.cshtml" />
+    <Content Include="Views\UserRoles\Edit.cshtml" />
+    <Content Include="Views\UserRoles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -449,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512142036248_fixed downtime.resx">
       <DependentUpon>201512142036248_fixed downtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512142318587_updated.resx">
+      <DependentUpon>201512142318587_updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
