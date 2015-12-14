@@ -76,6 +76,7 @@ namespace IdentityTutorial.Controllers
         // GET: Downtime/Create
         public ActionResult Create()
         {
+            ViewBag.PlantID = new SelectList(db.Plants, "PlantID", "Name");
             ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name");
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name");
             ViewBag.UserID = new SelectList(db.Users, "Id", "FirstName");
@@ -87,7 +88,7 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DowntimeID,UserID,ShiftID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
+        public ActionResult Create([Bind(Include = "DowntimeID,UserID,ShiftID,duration,PlantID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
         {
             try
             {
@@ -105,8 +106,8 @@ namespace IdentityTutorial.Controllers
                 //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-
-            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeTypeID);
+            ViewBag.PlantID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Plant", downtime.DowntimeType.Plant);
+            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeType.Name);
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", downtime.ShiftID);
             ViewBag.UserID = new SelectList(db.Users, "Id", "FirstName", downtime.UserID);
             return View(downtime);
@@ -124,7 +125,8 @@ namespace IdentityTutorial.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeTypeID);
+            ViewBag.PlantID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Plant", downtime.DowntimeType.Plant);
+            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeType.Name);
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", downtime.ShiftID);
             ViewBag.UserID = new SelectList(db.Users, "Id", "FirstName", downtime.UserID);
             return View(downtime);
@@ -135,7 +137,7 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DowntimeID,UserID,ShiftID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
+        public ActionResult Edit([Bind(Include = "DowntimeID,UserID,ShiftID,duration,PlantID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
         {
             try
             {
@@ -152,7 +154,8 @@ namespace IdentityTutorial.Controllers
                 //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeTypeID);
+            ViewBag.PlantID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Plant", downtime.DowntimeType.Plant);
+            ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeType.Name);
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", downtime.ShiftID);
             ViewBag.UserID = new SelectList(db.Users, "Id", "FirstName", downtime.UserID);
             return View(downtime);

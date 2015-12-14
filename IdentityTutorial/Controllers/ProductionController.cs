@@ -132,7 +132,7 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShiftID, PlantID, ActualMix, CrumbWaste, Cmp_Waste,Manning, Date")]Production production)
+        public ActionResult Create([Bind(Include = "ShiftID, PlantID, StartTime, EndTime, ActualMix, CrumbWaste, Cmp_Waste,Manning, Date")]Production production)
         {
             User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             ViewBag.UserID = user.Id.ToString();
@@ -184,7 +184,7 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductionID, UserID, ShiftID, PlantID, ActualMix, CrumbWaste, Cmp_Waste, Manning, Date ")]Production production)
+        public ActionResult Edit([Bind(Include = "ProductionID, UserID, ShiftID, PlantID,StartTime, EndTime, ActualMix, CrumbWaste, Cmp_Waste, Manning, Date ")]Production production)
         {
              
             User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());

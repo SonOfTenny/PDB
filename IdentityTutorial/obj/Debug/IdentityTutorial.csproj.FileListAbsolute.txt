@@ -77,7 +77,6 @@ c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTut
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\bin\Microsoft.Owin.Security.Google.xml
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.csprojResolveAssemblyReference.cache
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.dll
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.pdb
 c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.InitialCreate.resources
@@ -97,3 +96,9 @@ c:\users\mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTut
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addedrolesadmin.resources
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addeddowntimemodel.resources
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.downtimemod.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addeddisplaynames.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.updatedproduction.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.updatedtables.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations._new.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.fixeddowntime.resources
+C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.csprojResolveAssemblyReference.cache

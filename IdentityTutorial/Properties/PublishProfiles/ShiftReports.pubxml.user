@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALH/wNcc5gkOG8jEMCLnpWQAAAAACAAAAAAAQZgAAAAEAACAAAADgDD6On9WU7nzjk6pm5y9mr0q6jCrgyXmTanAEhQwlNQAAAAAOgAAAAAIAACAAAADek+u88jqaiYjr2MrsNes1JRbzyxUlcLsaqD3l0a0Y5oAAAAC8R5JY+/MJyvhkIaKfmh+9IDNHNB/KRddfBwGvj4+v/5vXyLxeMoMz3+5jT0jv+3pTfub4M8GLTDr428b6gOpn+XPnBZB+Y60B0ZVi/u0Lh/rAg7b60X1M3ExibdqrsYcjFxcSasfevCuutC4mR8+uRj2wV6Gu/Zp/1B3xXuzLiUAAAACurdeOtexGcHrYTyhvXY0AAXnZ+x/ckeTJa/l9ouMScf+SZvdKE7VGvRBmJsLpxPXRDPenv99P+KODPUYYsSoR</EncryptedPassword>
+    <_PublishTargetUrl>C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorial\IdentityTutorial\wdibpw//D:/PDB</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

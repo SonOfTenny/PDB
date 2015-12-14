@@ -16,7 +16,13 @@
             @Html.DisplayNameFor(model => model.User.UserName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.DowntimeType.Plant.Name)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.DowntimeType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Shift.Name)
@@ -27,6 +33,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
             
@@ -40,7 +49,13 @@
             @Html.DisplayFor(modelItem => item.User.UserName)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.DowntimeType.Plant.Name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.DowntimeType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Shift.Name)

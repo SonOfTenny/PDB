@@ -15,9 +15,11 @@ namespace IdentityTutorial.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public virtual ICollection<Production> Production { get; set; }
+        // downtime added 14/12/2015
+        public virtual ICollection<Downtime> Downtime { get; set; }
         // fancy foreign keys
 
-        
+
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
@@ -33,6 +35,7 @@ namespace IdentityTutorial.Models
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
+           // CHANGE THIS FOR LOCAL IRWINS
         {
         }
 

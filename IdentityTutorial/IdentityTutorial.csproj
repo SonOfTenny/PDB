@@ -263,6 +263,26 @@
     <Compile Include="Migrations\201512121710229_downtime mod.Designer.cs">
       <DependentUpon>201512121710229_downtime mod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512141828189_added display names.cs" />
+    <Compile Include="Migrations\201512141828189_added display names.Designer.cs">
+      <DependentUpon>201512141828189_added display names.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141846274_updated production.cs" />
+    <Compile Include="Migrations\201512141846274_updated production.Designer.cs">
+      <DependentUpon>201512141846274_updated production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141852169_updated tables.cs" />
+    <Compile Include="Migrations\201512141852169_updated tables.Designer.cs">
+      <DependentUpon>201512141852169_updated tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141956503_new .cs" />
+    <Compile Include="Migrations\201512141956503_new .Designer.cs">
+      <DependentUpon>201512141956503_new .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512142036248_fixed downtime.cs" />
+    <Compile Include="Migrations\201512142036248_fixed downtime.Designer.cs">
+      <DependentUpon>201512142036248_fixed downtime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
@@ -291,6 +311,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\PDB.pubxml" />
+    <None Include="Properties\PublishProfiles\ShiftReports.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -413,10 +435,29 @@
     <EmbeddedResource Include="Migrations\201512121710229_downtime mod.resx">
       <DependentUpon>201512121710229_downtime mod.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141828189_added display names.resx">
+      <DependentUpon>201512141828189_added display names.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141846274_updated production.resx">
+      <DependentUpon>201512141846274_updated production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141852169_updated tables.resx">
+      <DependentUpon>201512141852169_updated tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141956503_new .resx">
+      <DependentUpon>201512141956503_new .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512142036248_fixed downtime.resx">
+      <DependentUpon>201512142036248_fixed downtime.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
