@@ -1,5 +1,5 @@
 ﻿@model PagedList.IPagedList<IdentityTutorial.Models.Downtime>
-@using PagedList.Mvc;
+@using PagedList.Mvc; 
 @{
     ViewBag.Title = "Index";
 }
@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm("Index", "Downtime", FormMethod.Get))
+@using (Html.BeginForm("Index", "DowntimeAdmin", FormMethod.Get))
 {
     <p>
         Search: @Html.TextBox("searchString", ViewBag.CurrentFilter as string)
@@ -19,9 +19,9 @@
 
 <table class="table table-responsive">
     <tr>
-        <th>
-            @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.UserSortParm })
-        </th>
+       <th>
+           @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.UserSortParm })
+       </th>
         <th>
             @Html.ActionLink("Plant Type", "Index", new { sortOrder = ViewBag.PlantSortParm })
         </th>
@@ -46,41 +46,40 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DowntimeType.Plant.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Shift.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DowntimeType.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Reason)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Action)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.DowntimeID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.DowntimeID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.DowntimeID })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DowntimeType.Plant.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shift.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DowntimeType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Action)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DowntimeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DowntimeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DowntimeID })
+        </td>
+    </tr>
+}
 
 </table>
 <br />

@@ -22,7 +22,7 @@ namespace IdentityTutorial.Models
         public string Reason { get; set; }
         public string Action { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yy}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
 
         // all the fancy foreign keys

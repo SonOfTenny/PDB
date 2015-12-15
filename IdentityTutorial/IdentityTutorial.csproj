@@ -208,16 +208,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DowntimeAdminController.cs" />
     <Compile Include="Controllers\DowntimeController.cs" />
     <Compile Include="Controllers\DowntimeTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlantController.cs" />
+    <Compile Include="Controllers\ProductionAdminController.cs" />
     <Compile Include="Controllers\ProductionController.cs" />
-    <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
-    <Compile Include="Controllers\UserAdminController.cs" />
-    <Compile Include="Controllers\UserRolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -289,6 +288,11 @@
     <Compile Include="Migrations\201512142318587_updated.Designer.cs">
       <DependentUpon>201512142318587_updated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512151041067_15\12\2015.cs" />
+    <Compile Include="Migrations\201512151322022_removed roles and userroles.cs" />
+    <Compile Include="Migrations\201512151322022_removed roles and userroles.Designer.cs">
+      <DependentUpon>201512151322022_removed roles and userroles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
@@ -298,7 +302,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Production.cs" />
-    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Shift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -386,27 +389,26 @@
     <Content Include="Views\Production\Details.cshtml" />
     <Content Include="Views\Production\Edit.cshtml" />
     <Content Include="Views\Production\Index.cshtml" />
-    <Content Include="Views\UserAdmin\Create.cshtml" />
-    <Content Include="Views\UserAdmin\Delete.cshtml" />
-    <Content Include="Views\UserAdmin\Details.cshtml" />
-    <Content Include="Views\UserAdmin\Edit.cshtml" />
-    <Content Include="Views\UserAdmin\Index.cshtml" />
     <Content Include="Views\Downtime\Create.cshtml" />
     <Content Include="Views\Downtime\Delete.cshtml" />
     <Content Include="Views\Downtime\Details.cshtml" />
     <Content Include="Views\Downtime\Edit.cshtml" />
     <Content Include="Views\Downtime\Index.cshtml" />
-    <Content Include="Views\UserAdmin\RoleAdmin.cshtml" />
     <Content Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Details.cshtml" />
     <Content Include="Views\RolesAdmin\Edit.cshtml" />
     <Content Include="Views\RolesAdmin\Index.cshtml" />
-    <Content Include="Views\UserRoles\Create.cshtml" />
-    <Content Include="Views\UserRoles\Delete.cshtml" />
-    <Content Include="Views\UserRoles\Details.cshtml" />
-    <Content Include="Views\UserRoles\Edit.cshtml" />
-    <Content Include="Views\UserRoles\Index.cshtml" />
+    <Content Include="Views\ProductionAdmin\Create.cshtml" />
+    <Content Include="Views\ProductionAdmin\Delete.cshtml" />
+    <Content Include="Views\ProductionAdmin\Details.cshtml" />
+    <Content Include="Views\ProductionAdmin\Edit.cshtml" />
+    <Content Include="Views\ProductionAdmin\Index.cshtml" />
+    <Content Include="Views\DowntimeAdmin\Create.cshtml" />
+    <Content Include="Views\DowntimeAdmin\Delete.cshtml" />
+    <Content Include="Views\DowntimeAdmin\Details.cshtml" />
+    <Content Include="Views\DowntimeAdmin\Edit.cshtml" />
+    <Content Include="Views\DowntimeAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -434,6 +436,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512111142155_Adding production, plant, shift and downtimetype tables.resx">
       <DependentUpon>201512111142155_Adding production, plant, shift and downtimetype tables.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512111145564_added foreign key to identity user.resx">
       <DependentUpon>201512111145564_added foreign key to identity user.cs</DependentUpon>
@@ -452,6 +455,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512121710229_downtime mod.resx">
       <DependentUpon>201512121710229_downtime mod.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512141828189_added display names.resx">
       <DependentUpon>201512141828189_added display names.cs</DependentUpon>
@@ -470,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512142318587_updated.resx">
       <DependentUpon>201512142318587_updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512151322022_removed roles and userroles.resx">
+      <DependentUpon>201512151322022_removed roles and userroles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

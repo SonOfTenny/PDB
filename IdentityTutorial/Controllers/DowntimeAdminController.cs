@@ -13,7 +13,7 @@ using Microsoft.AspNet.Identity;
 
 namespace IdentityTutorial.Controllers
 {
-    public class DowntimeController : Controller
+    public class DowntimeAdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -41,7 +41,6 @@ namespace IdentityTutorial.Controllers
             ViewBag.CurrentFilter = searchString;
 
             var downtimedata = from s in db.Downtime
-                               where s.UserID == user.Id.ToString()
                                select s;
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -204,7 +203,7 @@ namespace IdentityTutorial.Controllers
         {
             try
             {
-                
+
                 Downtime downtime = db.Downtime.Find(id);
                 db.Downtime.Remove(downtime);
                 db.SaveChanges();

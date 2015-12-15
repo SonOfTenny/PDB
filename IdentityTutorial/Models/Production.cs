@@ -33,7 +33,7 @@ namespace IdentityTutorial.Models
         public int Cmp_Waste { get; set; }
         public int Manning { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yy}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
 
         // all the fancy foreign keys

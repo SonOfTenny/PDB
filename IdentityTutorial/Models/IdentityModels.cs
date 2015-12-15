@@ -18,8 +18,7 @@ namespace IdentityTutorial.Models
         // downtime added 14/12/2015
         public virtual ICollection<Downtime> Downtime { get; set; }
         // fancy foreign keys
-        public virtual Roles Role { get; set; }
-        public virtual ICollection<UserRoles> UserRole { get; set; }
+       
         
 
 
@@ -54,8 +53,7 @@ namespace IdentityTutorial.Models
         public DbSet<DowntimeType> DowntimeTypes { get; set; }
         public DbSet<Production> Productions { get; set; }
         public DbSet<Downtime> Downtime { get; set; }
-        public DbSet<Roles> Roles { get; set; }
-        public DbSet<UserRoles> UserRolse { get; set; }
+        
 
 
 
@@ -68,8 +66,7 @@ namespace IdentityTutorial.Models
             modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogin");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaim").Property(p => p.Id).HasColumnName("UserClaimId");
             modelBuilder.Entity<IdentityRole>().ToTable("Role").Property(p => p.Id).HasColumnName("RoleId");
-            modelBuilder.Entity<Roles>().HasKey(x => x.RoleId);
-            modelBuilder.Entity<UserRoles>().HasKey(x => x.UserRoleId);
+            
         }
 
         //public System.Data.Entity.DbSet<IdentityTutorial.Models.Production> Productions { get; set; }

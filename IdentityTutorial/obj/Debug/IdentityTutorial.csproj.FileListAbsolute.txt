@@ -103,3 +103,4 @@ C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTut
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.fixeddowntime.resources
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.csprojResolveAssemblyReference.cache
 C:\Users\Mark\documents\visual studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.updated.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorial\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.removedrolesanduserroles.resources

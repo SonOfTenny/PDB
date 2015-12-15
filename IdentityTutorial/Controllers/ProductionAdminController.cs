@@ -14,13 +14,12 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace IdentityTutorial.Controllers
 {
-
-    public class ProductionController : Controller
+    public class ProductionAdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         private User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
-        
+
         /// <summary>
         /// User manager - attached to application DB context
         /// </summary>
@@ -52,7 +51,6 @@ namespace IdentityTutorial.Controllers
             ViewBag.CurrentFilter = searchString;
 
             var productiondata = from s in db.Productions
-                                 where s.UserID == user.Id.ToString()
                                  select s;
 
             if (!String.IsNullOrEmpty(searchString))
@@ -187,14 +185,14 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductionID, UserID, ShiftID, PlantID,StartTime, EndTime, ActualMix, CrumbWaste, Cmp_Waste, Manning, Date ")]Production production)
         {
-             
+
             User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
 
             try
             {
                 if (ModelState.IsValid)
                 {
-                   // production.UserID = user.Id;
+                    // production.UserID = user.Id;
                     db.Entry(production).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");

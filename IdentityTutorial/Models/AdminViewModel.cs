@@ -29,7 +29,8 @@ namespace IdentityTutorial.Models
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public IEnumerable<SelectListItem> RolesList { get; set; }
 
     }
