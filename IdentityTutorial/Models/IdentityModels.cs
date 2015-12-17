@@ -18,11 +18,6 @@ namespace IdentityTutorial.Models
         // downtime added 14/12/2015
         public virtual ICollection<Downtime> Downtime { get; set; }
         // fancy foreign keys
-       
-        
-
-
-
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
@@ -53,9 +48,6 @@ namespace IdentityTutorial.Models
         public DbSet<DowntimeType> DowntimeTypes { get; set; }
         public DbSet<Production> Productions { get; set; }
         public DbSet<Downtime> Downtime { get; set; }
-        
-
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
