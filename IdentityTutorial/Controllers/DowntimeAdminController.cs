@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity;
 
 namespace IdentityTutorial.Controllers
 {
+    [Authorize(Roles = "Administrators, User")]
     public class DowntimeAdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -10,6 +10,7 @@ using IdentityTutorial.Models;
 
 namespace IdentityTutorial.Controllers
 {
+    [Authorize(Roles = "Administrators, User")]
     public class PlantController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -8,6 +8,14 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+#jumbo {
+    background-image: url("img/gradient1.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 0;
+    color: aliceblue;
+    
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 

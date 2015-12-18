@@ -11,6 +11,7 @@ using PagedList;
 
 namespace IdentityTutorial.Controllers
 {
+    [Authorize(Roles = "Administrators, User")]
     public class DowntimeTypeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

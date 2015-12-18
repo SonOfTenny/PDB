@@ -14,6 +14,7 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace IdentityTutorial.Controllers
 {
+    [Authorize(Roles = "Administrators, User")]
     public class ProductionAdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

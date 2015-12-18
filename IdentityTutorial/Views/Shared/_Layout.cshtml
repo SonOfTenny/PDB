@@ -30,8 +30,7 @@
                         <li>@Html.ActionLink("Plants", "Index", "Plant")</li>
                         <li>@Html.ActionLink("Downtime Types", "Index", "DowntimeType")</li>
 
-                    }
-                    @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
+                    }else if(Request.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Downtime", "Index", "Downtime")</li>
                         <li>@Html.ActionLink("Production", "Index", "Production")</li>

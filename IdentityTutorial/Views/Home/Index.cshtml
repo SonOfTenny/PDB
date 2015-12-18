@@ -2,29 +2,31 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+<div class="jumbotron" id="jumbo">
     <h1>Test Site</h1>
     <p class="lead">This site is currently in test mode</p>
 </div>
 <div class="row">
     <div class="col-lg-12">
         <h3>Dashboard will be displayed here</h3>
+        <hr />
         <div class="col-lg-4">
 
+
+            <h4>Select one of the following</h4>
+            @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
+            {
+                <p>@Html.ActionLink("Add Production Record", "Index", "ProductionAdmin")</p>
+                <p>@Html.ActionLink("Add Downtime Record", "Index", "DowntimeAdmin")</p>
+                <p>@Html.ActionLink("Modify Plant & Mix Rate Per Hour", "Index", "Plant")</p>
+                <p>@Html.ActionLink("Modify or Add New Downtime Types", "Index", "DowntimeType")</p>
+            }
+            @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
+            {
+                <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
+                <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
+            }
         </div>
-        <h4>Select one of the following</h4>
-        @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
-        {
-            <p>@Html.ActionLink("Add Production Record", "Index", "ProductionAdmin")</p>
-            <p>@Html.ActionLink("Add Downtime Record", "Index", "DowntimeAdmin")</p>
-            <p>@Html.ActionLink("Modify Plant & Mix Rate Per Hour", "Index", "Plant")</p>
-            <p>@Html.ActionLink("Modify or Add New Downtime Types", "Index", "DowntimeType")</p>
-        }
-        @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
-        {
-            <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
-            <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
-        }
 
     </div>
 </div>
