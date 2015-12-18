@@ -19,11 +19,11 @@ namespace IdentityTutorial.Models
         public int PlantID { get; set; }
         [DisplayName("Start Time")]
         [DataType(DataType.Time)]
-        [DisplayFormat(DataFormatString = "{0:t}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0: HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime StartTime { get; set; }
         [DisplayName("End Time")]
         [DataType(DataType.Time)]
-        [DisplayFormat(DataFormatString = "{0:t}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0: HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime EndTime { get; set; }
         [DisplayName("Actual Mix")]
         public int ActualMix { get; set; }

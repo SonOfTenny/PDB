@@ -121,8 +121,8 @@ namespace IdentityTutorial.Controllers
         {
 
             //var user = System.Web.HttpContext.Current.User.Identity.GetUserId();
-            User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
-            ViewBag.UserID = user.Id;
+            //User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+           // ViewBag.UserID = user.Id;
             ViewBag.PlantID = new SelectList(db.Plants, "PlantID", "Name");
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name");
             return View();

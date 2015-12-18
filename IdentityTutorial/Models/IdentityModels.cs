@@ -32,7 +32,7 @@ namespace IdentityTutorial.Models
     public class ApplicationDbContext : IdentityDbContext<User>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ShiftReportsLocal", throwIfV1Schema: false)
            // CHANGE THIS FOR LOCAL IRWINS
         {
         }
