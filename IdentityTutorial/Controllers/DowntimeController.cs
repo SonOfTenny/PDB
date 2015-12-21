@@ -60,10 +60,7 @@ namespace IdentityTutorial.Controllers
                     break;
                 case "Plant_desc":
                     downtimedata = downtimedata.OrderByDescending(s => s.DowntimeType.Plant.Name);
-                    break;
-                case "Duration_desc":
-                    downtimedata = downtimedata.OrderByDescending(s => s.duration);
-                    break;
+                    break; 
                 case "DownType_desc":
                     downtimedata = downtimedata.OrderByDescending(s => s.DowntimeType.Name);
                     break;
@@ -158,7 +155,7 @@ namespace IdentityTutorial.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DowntimeID,UserID,ShiftID,duration,PlantID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
+        public ActionResult Edit([Bind(Include = "DowntimeID,UserID,ShiftID,PlantID,DowntimeTypeID,Reason,Action,Date,StartTime,EndTime")] Downtime downtime)
         {
             try
             {

@@ -17,8 +17,12 @@ namespace IdentityTutorial.Models
         public int ShiftID { get; set; }
         [DisplayName("Downtime ID")]
         public int DowntimeTypeID { get; set; }
-        [DisplayName("Duration")]
-        public int duration { get; set; }
+        [DisplayFormat(DataFormatString = "{0: HH:mm}", ApplyFormatInEditMode = true)]
+        public DateTime StartTime { get; set; }
+        [DisplayName("End Time")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0: HH:mm}", ApplyFormatInEditMode = true)]
+        public DateTime EndTime { get; set; }
         public string Reason { get; set; }
         public string Action { get; set; }
         [DataType(DataType.Date)]

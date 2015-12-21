@@ -39,6 +39,12 @@
         <th>
             @Html.ActionLink("Manning", "Index", new { sortOrder = ViewBag.ManningSortParm })
         </th>
+        <td>
+            Start Time
+        </td>
+        <td>
+            End Time
+        </td>
         <th>
             @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
@@ -68,6 +74,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Manning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Date)

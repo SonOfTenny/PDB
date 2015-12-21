@@ -31,18 +31,23 @@
         <th>
             @Html.ActionLink("Downtime Type", "Index", new { sortOrder = ViewBag.DownTypeSortParm })
         </th>
-        <th>
-            @Html.ActionLink("Duration", "Index", new { sortOrder = ViewBag.DurationSortParm })
-        </th>
+        
         <th>
             Reason
         </th>
         <th>
             Action
         </th>
+        <td>
+            Start Time
+        </td>
+        <td>
+            End Time
+        </td>
         <th>
             @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
+
         <th></th>
     </tr>
 
@@ -61,15 +66,17 @@
             @Html.DisplayFor(modelItem => item.DowntimeType.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.duration)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Reason)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Action)
         </td>
-       
+       <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+       </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Date)
         </td>

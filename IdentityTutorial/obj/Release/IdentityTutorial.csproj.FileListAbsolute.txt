@@ -108,4 +108,4 @@ C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\Identity
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.csproj.GenerateResource.Cache
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.dll
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.pdb
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.csprojResolveAssemblyReference.cache
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.Removeddurationandaddedstartandendtimes.resources
