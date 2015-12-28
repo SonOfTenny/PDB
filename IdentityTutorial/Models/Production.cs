@@ -40,5 +40,11 @@ namespace IdentityTutorial.Models
         public virtual User User { get; set; }
         public virtual Shift Shift { get; set; }
         public virtual Plant Plant { get; set; }
+
+        //// Computed properties
+        //public int TotalWaste {
+        //    get { return (Cmp_Waste + CrumbWaste); }
+        //    private set { }
+        //}
     }
 }

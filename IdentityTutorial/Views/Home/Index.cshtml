@@ -10,12 +10,50 @@
     <div class="col-lg-12">
         <h3>Dashboard will be displayed here</h3>
         <hr />
+        <h3>Weekly Decision Table Example</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                <td>
+                       Plant Name
+                </td>
+                <td>
+                        Total Downtime (Mins)
+                </td>
+                    <td>
+                        Total Production (Mins)
+                    </td>
+                <td>
+                        Total Waste (Kg)
+                </td>
+                <td>
+                        Plant Efficiency (%)
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pan</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td>120</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Roll</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td>120</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
         <div class="col-lg-4">
-
-
-            <h4>Select one of the following</h4>
+ 
             @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
             {
+                <h4>Select one of the following</h4>
                 <p>@Html.ActionLink("Add Production Record", "Index", "ProductionAdmin")</p>
                 <p>@Html.ActionLink("Add Downtime Record", "Index", "DowntimeAdmin")</p>
                 <p>@Html.ActionLink("Modify Plant & Mix Rate Per Hour", "Index", "Plant")</p>
@@ -23,6 +61,7 @@
             }
             @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
             {
+                <h4>Select one of the following</h4>
                 <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
                 <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
             }

@@ -225,6 +225,7 @@
     <Compile Include="Controllers\ProductionAdminController.cs" />
     <Compile Include="Controllers\ProductionController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,6 +309,10 @@
     <Compile Include="Migrations\201512211427369_Removed duration and added start and end times.cs" />
     <Compile Include="Migrations\201512211427369_Removed duration and added start and end times.Designer.cs">
       <DependentUpon>201512211427369_Removed duration and added start and end times.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512211702330_added downtime start time header.cs" />
+    <Compile Include="Migrations\201512211702330_added downtime start time header.Designer.cs">
+      <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -427,6 +432,11 @@
     <Content Include="Views\DowntimeAdmin\Edit.cshtml" />
     <Content Include="Views\DowntimeAdmin\Index.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\UserAdmin\Create.cshtml" />
+    <Content Include="Views\UserAdmin\Delete.cshtml" />
+    <Content Include="Views\UserAdmin\Details.cshtml" />
+    <Content Include="Views\UserAdmin\Edit.cshtml" />
+    <Content Include="Views\UserAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -502,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512211427369_Removed duration and added start and end times.resx">
       <DependentUpon>201512211427369_Removed duration and added start and end times.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512211702330_added downtime start time header.resx">
+      <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
