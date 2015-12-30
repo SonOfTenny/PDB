@@ -330,11 +330,28 @@
     <Compile Include="Migrations\201512301326252_added calc fields to prod.Designer.cs">
       <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512301540521_added total downtime mins.cs" />
+    <Compile Include="Migrations\201512301540521_added total downtime mins.Designer.cs">
+      <DependentUpon>201512301540521_added total downtime mins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512301543327_added new dtype table.cs" />
+    <Compile Include="Migrations\201512301543327_added new dtype table.Designer.cs">
+      <DependentUpon>201512301543327_added new dtype table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512301549086_changed totalprodmins to double.cs" />
+    <Compile Include="Migrations\201512301549086_changed totalprodmins to double.Designer.cs">
+      <DependentUpon>201512301549086_changed totalprodmins to double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512301639035_changed downtime.cs" />
+    <Compile Include="Migrations\201512301639035_changed downtime.Designer.cs">
+      <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Downtime.cs" />
     <Compile Include="Models\DowntimeType.cs" />
+    <Compile Include="Models\DType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Plant.cs" />
@@ -542,6 +559,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512301326252_added calc fields to prod.resx">
       <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512301540521_added total downtime mins.resx">
+      <DependentUpon>201512301540521_added total downtime mins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512301543327_added new dtype table.resx">
+      <DependentUpon>201512301543327_added new dtype table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512301549086_changed totalprodmins to double.resx">
+      <DependentUpon>201512301549086_changed totalprodmins to double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512301639035_changed downtime.resx">
+      <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

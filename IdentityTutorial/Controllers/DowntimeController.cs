@@ -108,11 +108,14 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "DowntimeID,UserID,ShiftID,duration,PlantID,DowntimeTypeID,Reason,Action,Date")] Downtime downtime)
         {
+            TimeSpan span = (downtime.EndTime - downtime.StartTime);
+            double totalMins = span.TotalMinutes;
             try
             {
 
                 if (ModelState.IsValid)
                 {
+                    downtime.TotalDownMins = totalMins;
                     downtime.UserID = user.Id;
                     db.Downtime.Add(downtime);
                     db.SaveChanges();
@@ -157,10 +160,13 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "DowntimeID,UserID,ShiftID,PlantID,DowntimeTypeID,Reason,Action,Date,StartTime,EndTime")] Downtime downtime)
         {
+            TimeSpan span = (downtime.EndTime - downtime.StartTime);
+            double totalMins = span.TotalMinutes;
             try
             {
                 if (ModelState.IsValid)
                 {
+                    downtime.TotalDownMins = totalMins;
                     //downtime.UserID = user.Id;
                     db.Entry(downtime).State = EntityState.Modified;
                     db.SaveChanges();

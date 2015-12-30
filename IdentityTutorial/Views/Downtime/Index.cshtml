@@ -46,6 +46,9 @@
         <td>
             End Time
         </td>
+        <td>
+            Total Mins
+        </td>
         <th>
             @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
@@ -78,6 +81,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDownMins)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)

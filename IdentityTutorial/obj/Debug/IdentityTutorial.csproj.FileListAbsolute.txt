@@ -115,3 +115,7 @@ C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\Identity
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.csprojResolveAssemblyReference.cache
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addedforeignkeytodowntime.resources
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addedcalcfieldstoprod.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addedtotaldowntimemins.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addednewdtypetable.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changedtotalprodminstodouble.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changeddowntime.resources

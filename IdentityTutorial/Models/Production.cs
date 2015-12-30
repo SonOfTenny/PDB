@@ -36,19 +36,14 @@ namespace IdentityTutorial.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yy}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
         public int TotalWaste { get; set; }
-        public int TotalProdMins { get; set; }
+        public double TotalProdMins { get; set; }
 
         // all the fancy foreign keys
         public virtual User User { get; set; }
         public virtual Shift Shift { get; set; }
         public virtual Plant Plant { get; set; }
 
-        public class ProdViewModel
-        {
-           
-            public int totalWaste { get;set;}
-            public DateTime TotalProduction { get; set; }
-        }
+       
        
     }
 }

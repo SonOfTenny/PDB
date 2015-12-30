@@ -135,6 +135,9 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ShiftID, PlantID, StartTime, EndTime, ActualMix, CrumbWaste, Cmp_Waste,Manning, Date")]Production production)
         {
+            int sum = production.Cmp_Waste + production.CrumbWaste;
+            TimeSpan span = (production.EndTime - production.StartTime);
+            double totalMins = span.TotalMinutes;
             User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             ViewBag.UserID = user.Id.ToString();
             try
@@ -142,6 +145,8 @@ namespace IdentityTutorial.Controllers
 
                 if (ModelState.IsValid)
                 {
+                    production.TotalWaste = sum;
+                    production.TotalProdMins = totalMins;
                     production.UserID = user.Id;
                     db.Productions.Add(production);
                     db.SaveChanges();
@@ -187,14 +192,18 @@ namespace IdentityTutorial.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductionID, UserID, ShiftID, PlantID,StartTime, EndTime, ActualMix, CrumbWaste, Cmp_Waste, Manning, Date ")]Production production)
         {
-             
+            int sum = production.Cmp_Waste + production.CrumbWaste;
+            TimeSpan span = (production.EndTime - production.StartTime);
+            double totalMins = span.TotalMinutes;
             User user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
 
             try
             {
                 if (ModelState.IsValid)
                 {
-                   // production.UserID = user.Id;
+                    // production.UserID = user.Id;
+                    production.TotalWaste = sum;
+                    production.TotalProdMins = totalMins;
                     db.Entry(production).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
