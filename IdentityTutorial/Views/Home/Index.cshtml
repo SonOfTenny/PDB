@@ -1,35 +1,35 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    var db = Database.Open("ShiftReportsLocal");
+    //var totalWasteSQL = "select  SUM(Productions.Cmp_Waste + Productions.CrumbWaste) From Productions WHERE Productions.Date >= -7 ";
+    //var productionSql = "select * from Productions";
 }
 
-<div class="jumbotron" id="jumbo">
-    <h1>Test Site</h1>
-    <p class="lead">This site is currently in test mode</p>
+<div class="page-header" id="jumbo">
+    <h1><small>Find weekly and monthly summaries here</small></h1> 
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <h3>Dashboard will be displayed here</h3>
-        <hr />
-        <h3>Weekly Decision Table Example</h3>
+        <h3>Weekly Decision Table</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
-                <td>
-                       Plant Name
-                </td>
-                <td>
+                    <td>
+                        Plant Name
+                    </td>
+                    <td>
                         Total Downtime (Mins)
-                </td>
+                    </td>
                     <td>
                         Total Production (Mins)
                     </td>
-                <td>
+                    <td>
                         Total Waste (Kg)
-                </td>
-                <td>
+                    </td>
+                    <td>
                         Plant Efficiency (%)
-                </td>
-            </tr>
+                    </td>
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -50,7 +50,7 @@
         </table>
         <hr />
         <div class="col-lg-4">
- 
+
             @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
             {
                 <h4>Select one of the following</h4>
@@ -66,6 +66,20 @@
                 <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
             }
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table-bordered">
+                    <thead>
+                        <tr>
+                            Total Waste
+                        </tr>
+                    </thead>
+                    <tbody>
+                   
+                      </tbody> 
+                </table>
+                </div>
+            </div>
 
-    </div>
-</div>
+            </div>
+        </div>

@@ -34,6 +34,7 @@ namespace IdentityTutorial.Models
         // all the fancy foreign keys
         public virtual User User { get; set; }
         public virtual Shift Shift { get; set; }
+        public virtual  Plant Plant { get; set; }
         public virtual DowntimeType DowntimeType { get; set; }
     }
 }

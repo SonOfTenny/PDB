@@ -112,6 +112,8 @@ namespace IdentityTutorial.Controllers
             {
                 return HttpNotFound();
             }
+            int sum = production.Cmp_Waste + production.CrumbWaste;
+            //production.
             return View(production);
         }
 

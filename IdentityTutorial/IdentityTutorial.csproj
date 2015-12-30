@@ -314,6 +314,22 @@
     <Compile Include="Migrations\201512211702330_added downtime start time header.Designer.cs">
       <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512291309092_changed mrph to double.cs" />
+    <Compile Include="Migrations\201512291309092_changed mrph to double.Designer.cs">
+      <DependentUpon>201512291309092_changed mrph to double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512291315553_changed mrph.cs" />
+    <Compile Include="Migrations\201512291315553_changed mrph.Designer.cs">
+      <DependentUpon>201512291315553_changed mrph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512291632407_added foreign key to downtime.cs" />
+    <Compile Include="Migrations\201512291632407_added foreign key to downtime.Designer.cs">
+      <DependentUpon>201512291632407_added foreign key to downtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512301326252_added calc fields to prod.cs" />
+    <Compile Include="Migrations\201512301326252_added calc fields to prod.Designer.cs">
+      <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
@@ -326,6 +342,7 @@
     <Compile Include="Models\Shift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Tables\weekly.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -342,7 +359,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Charts\samplechart.cshtml" />
     <None Include="Properties\PublishProfiles\PDB.pubxml" />
     <None Include="Properties\PublishProfiles\ShiftReports.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -440,7 +456,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -515,6 +530,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512211702330_added downtime start time header.resx">
       <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512291309092_changed mrph to double.resx">
+      <DependentUpon>201512291309092_changed mrph to double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512291315553_changed mrph.resx">
+      <DependentUpon>201512291315553_changed mrph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512291632407_added foreign key to downtime.resx">
+      <DependentUpon>201512291632407_added foreign key to downtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512301326252_added calc fields to prod.resx">
+      <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

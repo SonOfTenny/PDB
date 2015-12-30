@@ -14,6 +14,6 @@ namespace IdentityTutorial.Models
         [DisplayName("Plant Name")]
         public string Name { get; set; }
         [DisplayName("Mix Rate Per Hour")]
-        public int MixRatePerHour { get; set; }
+        public double? MixRatePerHour { get; set; }
     }
 }
