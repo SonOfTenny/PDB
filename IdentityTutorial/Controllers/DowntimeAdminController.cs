@@ -128,7 +128,7 @@ namespace IdentityTutorial.Controllers
                 //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-            ViewBag.PlantID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Plant", downtime.DowntimeType.Plant);
+            ViewBag.PlantID = new SelectList(db.Plants, "PlantID", "Plant", downtime.Plant.Name);
             ViewBag.DowntimeTypeID = new SelectList(db.DowntimeTypes, "DowntimeTypeID", "Name", downtime.DowntimeType.Name);
             ViewBag.ShiftID = new SelectList(db.Shifts, "ShiftID", "Name", downtime.ShiftID);
             ViewBag.UserID = new SelectList(db.Users, "Id", "FirstName", downtime.UserID);
