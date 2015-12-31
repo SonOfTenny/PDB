@@ -18,11 +18,23 @@ namespace IdentityTutorial.Controllers
             viewModel.Downtime = db.Downtime;
             viewModel.Production = db.Productions;
             viewModel.MonthlyDowntime = db.Downtime;
-            viewModel.MonthlyProduction = db.Productions;
+            //using (var a = new ApplicationDbContext())
+            //{
+            //    viewModel.MonthlyProduction =
+            //       db.Database.SqlQuery("SELECT SUM(Productions.TotalWaste) as 'TotalWaste',SUM(Productions.TotalProdMins) as 'Total Mins', Plants.Name FROM Productions INNER JOIN Plants ON Plants.PlantID = Productions.PlantID WHERE Productions.Date >= -30 GROUP BY Plants.Name").ToList<Production>();
+            //}
+             
             viewModel.Production = viewModel.Production.Where(s => s.Date >= DateTime.Now.Date.AddDays(-7));
             viewModel.Downtime = viewModel.Downtime.Where(s => s.Date >= DateTime.Now.Date.AddDays(-7));
-            viewModel.MonthlyProduction = viewModel.MonthlyProduction.Where(s => s.Date >= DateTime.Now.Date.AddMonths(-1));
-            viewModel.MonthlyDowntime = viewModel.MonthlyDowntime.Where(s => s.Date >= DateTime.Now.Date.AddMonths(-1));
+            //viewModel.MonthlyProduction = db.Productions.Where(s => s.Date >= DateTime.Now.Date.AddDays(-30))
+            //                               .Select(s => new Production
+            //                               {
+            //                                   Plant = Plan
+            //                               }).AsEnumerable();
+
+
+            //viewModel.MonthlyDowntime = viewModel.MonthlyDowntime.Where(s => s.Date >= DateTime.Now.Date.AddMonths(-1)).Sum(s => s.TotalDownMins);
+            var last30days = DateTime.Now.Date.AddDays(-30);
             var last7days = DateTime.Now.Date.AddDays(-7);
             var production = from s in db.Productions
                                  where s.Date >= last7days

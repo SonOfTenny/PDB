@@ -346,6 +346,14 @@
     <Compile Include="Migrations\201512301639035_changed downtime.Designer.cs">
       <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512311428079_meh.cs" />
+    <Compile Include="Migrations\201512311428079_meh.Designer.cs">
+      <DependentUpon>201512311428079_meh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512311528234_InitialMigrations.cs" />
+    <Compile Include="Migrations\201512311528234_InitialMigrations.Designer.cs">
+      <DependentUpon>201512311528234_InitialMigrations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
@@ -572,6 +580,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512301639035_changed downtime.resx">
       <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512311428079_meh.resx">
+      <DependentUpon>201512311428079_meh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512311528234_InitialMigrations.resx">
+      <DependentUpon>201512311528234_InitialMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

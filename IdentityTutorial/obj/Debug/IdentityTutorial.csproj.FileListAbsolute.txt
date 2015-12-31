@@ -119,3 +119,5 @@ C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\Identity
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.addednewdtypetable.resources
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changedtotalprodminstodouble.resources
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.changeddowntime.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.meh.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.InitialMigrations.resources

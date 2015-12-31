@@ -1,13 +1,7 @@
 ﻿@model IdentityTutorial.ViewModels.DashboardData
     @{
-        ViewBag.Title = "Home Page";     
+        ViewBag.Title = "Home Page";
     }
-
-    <div class="page-header" id="jumbo">
-        <h1><small>Find weekly and monthly summaries here</small></h1>
-    </div>
-    
-            <hr />
             <div class="col-lg-4">
 
                 @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
@@ -28,7 +22,7 @@
                 <div class="col-lg-8">
                     <div class="row" >
                     <h3> Weekly Production Information</h3>
-                    <table class="table table-condensed">
+                    <table class="table table-condensed table-striped">
                         <thead>
                             <td>
                                 Plant Name
@@ -40,8 +34,6 @@
                                 Total Time (Mins)
                             </td>
                         </thead>
-                        </table>
-                        <table class="table table-condensed table-striped tableScrollable">
                         <tbody>
                             @foreach (var item in Model.Production)
                             {
@@ -62,17 +54,17 @@
               </div>
                     <div class="row">
                         <h3> Weekly Downtime Information</h3>
-                        <table class="table table-condensed">
+                        <table class="table table-condensed table-striped">
                             <thead>
-                            <td>
-                                Plant Name
-                            </td>
-                            <td>
-                                Total Time (Mins)
-                            </td>
+                                <tr>
+                                    <td>
+                                        Plant Name
+                                    </td>
+                                    <td>
+                                        Total Time (Mins)
+                                    </td>
+                                </tr>
                             </thead>
-                            </table>
-                            <table class="table table-condensed table-striped tableScrollable">
                                 <tbody>
                                     @foreach (var item in Model.Downtime)
                                     {
@@ -89,8 +81,8 @@
                             </table>
                     </div>
                     <div class="row">
-                        <h3> Monthly Production Information</h3>
-                        <table class="table table-condensed">
+                        <h3> Last 30 Days Production Info</h3>
+                        <table class="table table-condensed table-striped">
                             <thead>
                             <td>
                                 Plant Name
@@ -99,25 +91,12 @@
                                 Total Time (Mins)
                             </td>
                             </thead>
-                        </table>
-                        <table class="table table-condensed table-striped tableScrollable">
                             <tbody>
-                                @foreach (var item in Model.MonthlyProduction)
-                                {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Plant.Name)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TotalProdMins)
-                                        </td>
-                                    </tr>
-                                }
+                               
                             </tbody>
                         </table>
                     </div>
         </div>
-
     </div>
 </div>
 

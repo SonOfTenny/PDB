@@ -17,6 +17,8 @@ namespace IdentityTutorial.Models
         public int ShiftID { get; set; }
         [DisplayName("Downtime ID")]
         public int DowntimeTypeID { get; set; }
+        //[DisplayName("Plant ID")]
+        //public int PlantID { get; set; }
         [DisplayName("Start Time")]
         [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString = "{0: HH:mm}", ApplyFormatInEditMode = true)]
@@ -35,7 +37,7 @@ namespace IdentityTutorial.Models
         // all the fancy foreign keys
         public virtual User User { get; set; }
         public virtual Shift Shift { get; set; }
-        public virtual  Plant Plant { get; set; }
+        //public virtual  Plant Plant { get; set; }
         public virtual DowntimeType DowntimeType { get; set; }
     }
 }
