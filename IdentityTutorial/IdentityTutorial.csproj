@@ -306,53 +306,9 @@
     <Compile Include="Migrations\201512151701064_check1.Designer.cs">
       <DependentUpon>201512151701064_check1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512211427369_Removed duration and added start and end times.cs" />
-    <Compile Include="Migrations\201512211427369_Removed duration and added start and end times.Designer.cs">
-      <DependentUpon>201512211427369_Removed duration and added start and end times.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512211702330_added downtime start time header.cs" />
-    <Compile Include="Migrations\201512211702330_added downtime start time header.Designer.cs">
-      <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512291309092_changed mrph to double.cs" />
-    <Compile Include="Migrations\201512291309092_changed mrph to double.Designer.cs">
-      <DependentUpon>201512291309092_changed mrph to double.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512291315553_changed mrph.cs" />
-    <Compile Include="Migrations\201512291315553_changed mrph.Designer.cs">
-      <DependentUpon>201512291315553_changed mrph.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512291632407_added foreign key to downtime.cs" />
-    <Compile Include="Migrations\201512291632407_added foreign key to downtime.Designer.cs">
-      <DependentUpon>201512291632407_added foreign key to downtime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301326252_added calc fields to prod.cs" />
-    <Compile Include="Migrations\201512301326252_added calc fields to prod.Designer.cs">
-      <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301540521_added total downtime mins.cs" />
-    <Compile Include="Migrations\201512301540521_added total downtime mins.Designer.cs">
-      <DependentUpon>201512301540521_added total downtime mins.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301543327_added new dtype table.cs" />
-    <Compile Include="Migrations\201512301543327_added new dtype table.Designer.cs">
-      <DependentUpon>201512301543327_added new dtype table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301549086_changed totalprodmins to double.cs" />
-    <Compile Include="Migrations\201512301549086_changed totalprodmins to double.Designer.cs">
-      <DependentUpon>201512301549086_changed totalprodmins to double.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301639035_changed downtime.cs" />
-    <Compile Include="Migrations\201512301639035_changed downtime.Designer.cs">
-      <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512311428079_meh.cs" />
-    <Compile Include="Migrations\201512311428079_meh.Designer.cs">
-      <DependentUpon>201512311428079_meh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512311528234_InitialMigrations.cs" />
-    <Compile Include="Migrations\201512311528234_InitialMigrations.Designer.cs">
-      <DependentUpon>201512311528234_InitialMigrations.cs</DependentUpon>
+    <Compile Include="Migrations\201601022113335_InitialMigration.cs" />
+    <Compile Include="Migrations\201601022113335_InitialMigration.Designer.cs">
+      <DependentUpon>201601022113335_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -551,41 +507,8 @@
     <EmbeddedResource Include="Migrations\201512151701064_check1.resx">
       <DependentUpon>201512151701064_check1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512211427369_Removed duration and added start and end times.resx">
-      <DependentUpon>201512211427369_Removed duration and added start and end times.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512211702330_added downtime start time header.resx">
-      <DependentUpon>201512211702330_added downtime start time header.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512291309092_changed mrph to double.resx">
-      <DependentUpon>201512291309092_changed mrph to double.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512291315553_changed mrph.resx">
-      <DependentUpon>201512291315553_changed mrph.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512291632407_added foreign key to downtime.resx">
-      <DependentUpon>201512291632407_added foreign key to downtime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301326252_added calc fields to prod.resx">
-      <DependentUpon>201512301326252_added calc fields to prod.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301540521_added total downtime mins.resx">
-      <DependentUpon>201512301540521_added total downtime mins.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301543327_added new dtype table.resx">
-      <DependentUpon>201512301543327_added new dtype table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301549086_changed totalprodmins to double.resx">
-      <DependentUpon>201512301549086_changed totalprodmins to double.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301639035_changed downtime.resx">
-      <DependentUpon>201512301639035_changed downtime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512311428079_meh.resx">
-      <DependentUpon>201512311428079_meh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512311528234_InitialMigrations.resx">
-      <DependentUpon>201512311528234_InitialMigrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601022113335_InitialMigration.resx">
+      <DependentUpon>201601022113335_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,13 +7,13 @@ namespace IdentityTutorial.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedtotaldowntimemins : IMigrationMetadata
+    public sealed partial class InitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedtotaldowntimemins));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512301540521_added total downtime mins"; }
+            get { return "201601022113335_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

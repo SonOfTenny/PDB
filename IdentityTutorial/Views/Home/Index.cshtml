@@ -1,102 +1,116 @@
 ﻿@model IdentityTutorial.ViewModels.DashboardData
-    @{
-        ViewBag.Title = "Home Page";
-    }
-            <div class="col-lg-4">
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="col-lg-4">
 
-                @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
+    @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
             {
-                    <h4>Select one of the following</h4>
-                    <p>@Html.ActionLink("Add Production Record", "Index", "ProductionAdmin")</p>
+        <h4>Select one of the following</h4>
+        <p>@Html.ActionLink("Add Production Record", "Index", "ProductionAdmin")</p>
                     <p>@Html.ActionLink("Add Downtime Record", "Index", "DowntimeAdmin")</p>
                     <p>@Html.ActionLink("Modify Plant & Mix Rate Per Hour", "Index", "Plant")</p>
                     <p>@Html.ActionLink("Modify or Add New Downtime Types", "Index", "DowntimeType")</p>
-                }
-                @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
+    }
+    @if (Request.IsAuthenticated && !User.IsInRole("Administrators"))
             {
-                    <h4>Select one of the following</h4>
-                    <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
+        <h4>Select one of the following</h4>
+        <p>@Html.ActionLink("Add Production Record", "Index", "Production")</p>
                     <p>@Html.ActionLink("Add Downtime Record", "Index", "Downtime")</p>
-                }
-            </div>
-                <div class="col-lg-8">
-                    <div class="row" >
-                    <h3> Weekly Production Information</h3>
-                    <table class="table table-condensed table-striped">
-                        <thead>
+    }
+
+</div>
+@if (Request.IsAuthenticated)
+{
+    <div class="col-lg-8">
+        <div class="row">
+            <h3> Weekly Production Information</h3>
+            <table class="table table-condensed table-striped">
+                <thead>
+                <td>
+                    Plant Name
+                </td>
+                <td>
+                    Total Waste (Kg)
+                </td>
+                <td>
+                    Total Time (Mins)
+                </td>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Production)
+                    {
+                        <tr>
                             <td>
-                                Plant Name
+                                @Html.DisplayFor(modelItem => item.Plant.Name)
                             </td>
                             <td>
-                                Total Waste (Kg)
+                                @Html.DisplayFor(modelItem => item.TotalWaste)
                             </td>
                             <td>
-                                Total Time (Mins)
+                                @Html.DisplayFor(modelItem => item.TotalProdMins)
                             </td>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model.Production)
-                            {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Plant.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TotalWaste)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TotalProdMins)
-                                </td>
-                           </tr>
-                            }
-                    </tbody>
-                </table>
-              </div>
-                    <div class="row">
-                        <h3> Weekly Downtime Information</h3>
-                        <table class="table table-condensed table-striped">
-                            <thead>
-                                <tr>
-                                    <td>
-                                        Plant Name
-                                    </td>
-                                    <td>
-                                        Total Time (Mins)
-                                    </td>
-                                </tr>
-                            </thead>
-                                <tbody>
-                                    @foreach (var item in Model.Downtime)
-                                    {
-                                        <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.DowntimeType.Plant.Name)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.TotalDownMins)
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                    </div>
-                    <div class="row">
-                        <h3> Last 30 Days Production Info</h3>
-                        <table class="table table-condensed table-striped">
-                            <thead>
-                            <td>
-                                Plant Name
-                            </td>
-                            <td>
-                                Total Time (Mins)
-                            </td>
-                            </thead>
-                            <tbody>
-                               
-                            </tbody>
-                        </table>
-                    </div>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
+        <div class="row">
+            <h3> Weekly Downtime Information</h3>
+            <table class="table table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <td>
+                            Plant Name
+                        </td>
+                        <td>
+                            Total Time (Mins)
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Downtime)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DowntimeType.Plant.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalDownMins)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <h3> Last 30 Days Production Info</h3>
+            <table class="table table-condensed table-striped">
+                <thead>
+                <td>
+                    Plant Name
+                </td>
+                <td>
+                    Total Time (Mins)
+                </td>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+}
+@if (!Request.IsAuthenticated)
+{
+    <div>
+        <div class="jumbotron">
+            <h1>Welcome</h1>
+            <h2>Please Login</h2>
+            <br />
+            <p>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary btn-lg" })</p>
+        </div>
+    </div>
+}
     </div>
 </div>
 

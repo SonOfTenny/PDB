@@ -108,8 +108,5 @@ C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\Identity
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.csproj.GenerateResource.Cache
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.dll
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.pdb
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.Removeddurationandaddedstartandendtimes.resources
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.csprojResolveAssemblyReference.cache
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.addeddowntimestarttimeheader.resources
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.changedmrphtodouble.resources
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.changedmrph.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Release\IdentityTutorial.Migrations.InitialMigration.resources

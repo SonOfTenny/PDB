@@ -9,9 +9,10 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
+                <!--Brand can go here-->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,15 +26,62 @@
                     <!-- ONLY IF YOURE WELCOME YOU CAN ENTER-->
                     @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
                     {
-                        <li>@Html.ActionLink("Downtime", "Index", "DowntimeAdmin")</li>
-                        <li>@Html.ActionLink("Production", "Index", "ProductionAdmin")</li>
-                        <li>@Html.ActionLink("Plants", "Index", "Plant")</li>
-                        <li>@Html.ActionLink("Downtime Types", "Index", "DowntimeType")</li>
+                        <!--Downtime Option-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Downtime <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Records", "Index", "DowntimeAdmin")</li>
+                                <li>@Html.ActionLink("Add New Record", "Create", "DowntimeAdmin")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Production <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Records", "Index", "ProductionAdmin")</li>
+                                <li>@Html.ActionLink("Add New Record", "Create", "ProductionAdmin")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plants <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Plants", "Index", "Plant")</li>
+                                <li>@Html.ActionLink("Add New Plant", "Create", "Plant")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Downtime Types <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Types", "Index", "DowntimeType")</li>
+                                <li>@Html.ActionLink("Add New Record", "Create", "DowntimeType")</li>
+                            </ul>
+                        </li>
+                        <!--User manager area-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Admin<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("New User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                            </ul>
+                        </li>
+                        
 
-                    }else if(Request.IsAuthenticated)
+                    }
+                    else if (Request.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Downtime", "Index", "Downtime")</li>
-                        <li>@Html.ActionLink("Production", "Index", "Production")</li>
+                         <!--Downtime Option-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Downtime <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Records", "Index", "Downtime")</li>
+                                <li>@Html.ActionLink("Add New Record", "Create", "Downtime")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Production <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("View Records", "Index", "Production")</li>
+                                <li>@Html.ActionLink("Add New Record", "Create", "Production")</li>
+                            </ul>
+                        </li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -45,6 +93,7 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Mark Tennyson Development</p>
+            <p>Designed for Irwin's Bakery</p>
         </footer>
     </div>
 
