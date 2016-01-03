@@ -16,7 +16,7 @@
         <input type="submit" value="Search" />
     </p>
 }
-<table class="table table-responsive">
+<table class="table table-responsive table-striped table-bordered">
     <tr>
         <th>
             @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.UserSortParm })
@@ -54,7 +54,9 @@
         <th>
             @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
-        <th></th>
+        <th>
+            Options
+        </th>
     </tr>
 
 @foreach (var item in Model) {

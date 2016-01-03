@@ -394,11 +394,6 @@
     <Content Include="Views\Plant\Details.cshtml" />
     <Content Include="Views\Plant\Edit.cshtml" />
     <Content Include="Views\Plant\Index.cshtml" />
-    <Content Include="Views\Shift\Create.cshtml" />
-    <Content Include="Views\Shift\Delete.cshtml" />
-    <Content Include="Views\Shift\Details.cshtml" />
-    <Content Include="Views\Shift\Edit.cshtml" />
-    <Content Include="Views\Shift\Index.cshtml" />
     <Content Include="Views\DowntimeType\Create.cshtml" />
     <Content Include="Views\DowntimeType\Delete.cshtml" />
     <Content Include="Views\DowntimeType\Details.cshtml" />
@@ -414,11 +409,6 @@
     <Content Include="Views\Downtime\Details.cshtml" />
     <Content Include="Views\Downtime\Edit.cshtml" />
     <Content Include="Views\Downtime\Index.cshtml" />
-    <Content Include="Views\RolesAdmin\Create.cshtml" />
-    <Content Include="Views\RolesAdmin\Delete.cshtml" />
-    <Content Include="Views\RolesAdmin\Details.cshtml" />
-    <Content Include="Views\RolesAdmin\Edit.cshtml" />
-    <Content Include="Views\RolesAdmin\Index.cshtml" />
     <Content Include="Views\ProductionAdmin\Create.cshtml" />
     <Content Include="Views\ProductionAdmin\Delete.cshtml" />
     <Content Include="Views\ProductionAdmin\Details.cshtml" />

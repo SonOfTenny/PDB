@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table table-hover">
+<table class="table table-responsive table-striped table-bordered">
     <tr>
         <th>
             @Html.ActionLink("Plant Name", "Index", new { sortOrder = ViewBag.NameSortParm})
@@ -17,7 +17,9 @@
         <th>
            @Html.ActionLink("Mix Rate Per Hour", "Index", new { sortOrder = ViewBag.MRPHSortParm })
         </th>
-        <th></th>
+        <th>
+            Options
+        </th>
     </tr>
 
 @foreach (var item in Model) {
