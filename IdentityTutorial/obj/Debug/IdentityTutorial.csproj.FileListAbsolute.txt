@@ -109,4 +109,4 @@ C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\Identity
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.dll
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.pdb
 C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.csprojResolveAssemblyReference.cache
-C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.InitialMigration.resources
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\IdentityTutorialOld\IdentityTutorial\obj\Debug\IdentityTutorial.Migrations.updateddtype.resources

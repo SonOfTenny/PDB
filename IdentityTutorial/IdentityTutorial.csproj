@@ -219,6 +219,7 @@
     <Compile Include="Controllers\DowntimeAdminController.cs" />
     <Compile Include="Controllers\DowntimeController.cs" />
     <Compile Include="Controllers\DowntimeTypeController.cs" />
+    <Compile Include="Controllers\DTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlantController.cs" />
@@ -306,9 +307,9 @@
     <Compile Include="Migrations\201512151701064_check1.Designer.cs">
       <DependentUpon>201512151701064_check1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601022113335_InitialMigration.cs" />
-    <Compile Include="Migrations\201601022113335_InitialMigration.Designer.cs">
-      <DependentUpon>201601022113335_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201601032131394_updated dtype.cs" />
+    <Compile Include="Migrations\201601032131394_updated dtype.Designer.cs">
+      <DependentUpon>201601032131394_updated dtype.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -425,6 +426,11 @@
     <Content Include="Views\UserAdmin\Details.cshtml" />
     <Content Include="Views\UserAdmin\Edit.cshtml" />
     <Content Include="Views\UserAdmin\Index.cshtml" />
+    <Content Include="Views\DTypes\Create.cshtml" />
+    <Content Include="Views\DTypes\Delete.cshtml" />
+    <Content Include="Views\DTypes\Details.cshtml" />
+    <Content Include="Views\DTypes\Edit.cshtml" />
+    <Content Include="Views\DTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,8 +503,8 @@
     <EmbeddedResource Include="Migrations\201512151701064_check1.resx">
       <DependentUpon>201512151701064_check1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601022113335_InitialMigration.resx">
-      <DependentUpon>201601022113335_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601032131394_updated dtype.resx">
+      <DependentUpon>201601032131394_updated dtype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

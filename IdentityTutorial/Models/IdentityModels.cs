@@ -61,6 +61,8 @@ namespace IdentityTutorial.Models
             
         }
 
+        public System.Data.Entity.DbSet<IdentityTutorial.Models.DType> DTypes { get; set; }
+
         //public System.Data.Entity.DbSet<IdentityTutorial.Models.Production> Productions { get; set; }
     }
 }

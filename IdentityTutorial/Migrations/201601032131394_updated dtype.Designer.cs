@@ -7,13 +7,13 @@ namespace IdentityTutorial.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class updateddtype : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateddtype));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601022113335_InitialMigration"; }
+            get { return "201601032131394_updated dtype"; }
         }
         
         string IMigrationMetadata.Source
